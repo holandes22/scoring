@@ -1,6 +1,13 @@
-<div>
-
-  L <div id="score-left"><%= @conn.assigns.score.left %></div>
-  R <div id="score-right"><%= @conn.assigns.score.right %></div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="jumbotron">
+      <h1 id="score-left"><%= @conn.assigns.score.left %></h1>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="jumbotron">
+      <h1 id="score-right"><%= @conn.assigns.score.right %></h1>
+    </div>
+  </div>
 </div>
 
