@@ -1,0 +1,5 @@
+<div>
+  <div>L <%= @conn.assigns.score.left %></div>
+  <div>R <%= @conn.assigns.score.right %></div>
+</div>
+

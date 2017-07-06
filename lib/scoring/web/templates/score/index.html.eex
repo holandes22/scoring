@@ -1,0 +1,5 @@
+<%= form_for @conn, score_path(@conn, :index), [as: :score], fn f -> %>
+  Left <%= number_input f, :left %>
+  Right <%= number_input f, :right %>
+  <%= submit "Update score" %>
+<% end %>
