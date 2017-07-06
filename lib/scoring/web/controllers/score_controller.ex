@@ -1,9 +1,10 @@
 defmodule Scoring.Web.ScoreController do
   use Scoring.Web, :controller
-  alias Scoring.Server
 
-  def index(conn, %{"score" => %{"left" => left, "right" => right}}) do
-    Scoring.Server.set_score(left, right)
+  def index(conn, %{"score" => score}) do
+
+    Scoring.Server.set_score(score["left"], score["right"])
+    Scoring.Web.Endpoint.broadcast("room:lobby", "score_event", score)
 
     conn
     |> put_flash(:info, "Score updated")

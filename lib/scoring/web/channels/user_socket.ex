@@ -2,7 +2,7 @@ defmodule Scoring.Web.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", Scoring.Web.RoomChannel
+  channel "room:*", Scoring.Web.RoomChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
