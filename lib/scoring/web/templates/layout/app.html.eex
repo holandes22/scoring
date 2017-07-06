@@ -19,6 +19,7 @@
       </div>
 
       <main role="main">
+        <h3>Twist Scoring</h3>
         <%= render @view_module, @view_template, assigns %>
       </main>
 
